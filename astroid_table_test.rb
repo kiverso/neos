@@ -21,4 +21,14 @@ class AstroidTableTest < Minitest::Test
   
     assert_equal expected, @table.column_data
   end
+
+  def test_it_can_get_header
+    expected = "| Name              | Diameter | Missed The Earth By: |"
+    assert_equal expected, @table.header
+  end
+
+  def test_it_can_get_divider
+    expected = "+-------------------+----------+----------------------+"
+    assert_equal expected, @table.divider
+  end
 end

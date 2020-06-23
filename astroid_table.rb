@@ -17,4 +17,12 @@ class AstroidTable
     end
   end
 
+  def header
+    "| #{ column_data.map { |_,col| col[:label].ljust(col[:width]) }.join(' | ') } |"
+  end
+
+  def divider
+    "+-#{column_data.map { |_,col| "-"*col[:width] }.join('-+-') }-+"
+  end
+
 end
