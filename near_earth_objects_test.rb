@@ -21,4 +21,8 @@ class NearEarthObjectsTest < Minitest::Test
   def test_it_can_get_largest_asteroid_diameter
     assert_equal 10233, @results.largest_astroid_diameter
   end
+
+  def test_it_can_get_number_of_astroids
+    assert_equal 12, @results.total_number_of_astroids
+  end
 end

@@ -53,4 +53,8 @@ class NearEarthObjects
     end
     largest_astroid[:estimated_diameter][:feet][:estimated_diameter_max].to_i
   end
+
+  def total_number_of_astroids 
+    parsed_asteroids_data.length
+  end
 end
