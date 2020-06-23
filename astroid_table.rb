@@ -34,4 +34,8 @@ class AstroidTable
     table_rows.chomp
   end
 
+  def make_full_table
+    "#{divider}\n#{header}\n#{rows}\n#{divider}"
+  end
+
 end
