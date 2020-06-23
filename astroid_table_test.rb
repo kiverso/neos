@@ -13,4 +13,12 @@ class AstroidTableTest < Minitest::Test
   def test_it_exists
     assert_instance_of AstroidTable, @table
   end
+
+  def test_it_can_get_column_data
+    expected = {:name=>{:label=>"Name", :width=>17},
+                :diameter=>{:label=>"Diameter", :width=>8},
+                :miss_distance=>{:label=>"Missed The Earth By:", :width=>20}}
+  
+    assert_equal expected, @table.column_data
+  end
 end

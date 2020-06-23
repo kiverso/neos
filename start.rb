@@ -1,4 +1,5 @@
 require_relative 'near_earth_objects'
+require 'pry'
 
 puts "________________________________________________________________________________________________________________________________"
 puts "Welcome to NEO. Here you will find information about how many meteors, astroids, comets pass by the earth every day. \nEnter a date below to get a list of the objects that have passed by the earth on that day."
@@ -29,6 +30,7 @@ end
 def create_rows(astroid_data, column_info)
   rows = astroid_data.each { |astroid| format_row_data(astroid, column_info) }
 end
+binding.pry
 
 formated_date = DateTime.parse(date).strftime("%A %b %d, %Y")
 puts "______________________________________________________________________________"
